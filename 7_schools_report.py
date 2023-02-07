@@ -40,3 +40,19 @@ for school in schools:
             )
             print()
             print()
+
+# Display report for all universities that have a total price for in-state students living off campus over $50,000
+
+for school in schools:
+    if school["NCAA"]["NAIA conference number football (IC2020)"] in conference_schools:
+        if (
+            school[
+                "Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"
+            ]
+            > 50000
+        ):
+            print(f"University Name: {school['instnm']}")
+            print(
+                f"Total price for in-state students living off campus: ${school['Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)']}"
+            )
+            print()
